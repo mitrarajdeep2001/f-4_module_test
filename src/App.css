@@ -1,38 +1,112 @@
+/* Style for app component */
 .App {
+  background: #000;
+}
+
+.App h1 {
   text-align: center;
+  font-size: 3rem;
+  padding-bottom: 5px;
+  border: none;
+  border-bottom: 3px solid #fff;
+  color: #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Style for Loader */
+.loader{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Style for home component */
+.Home h2, .Details h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: lightgrey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Style for card container */
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* Style for cards */
+.card {
+  border: 2px solid lightgrey;
+  border-radius: 10px;
+  width: 200px;
+  margin-bottom: 20px;
+  padding: 5px;
+  overflow: hidden;
+  color: lightgrey;
+  font-style: italic;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.6s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+}
+
+.card-img img {
+  width: 180px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.info .bold {
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Style for details page */
+.Details {
+  width: 100%;
+  height: calc(100vh - 80px);
+}
+
+.Details .container{
+  width: 600px;
+  height: 500px;
+  margin-inline: auto;
+  margin-top: 20px;
+  border: 2px solid lightgrey;
+  color: lightgrey;
+  border-radius: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.image-container{
+  padding-top: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.image-container, img{
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+}
+
+.Details .info {
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+.info p {
+  margin-bottom: 10px;
 }
